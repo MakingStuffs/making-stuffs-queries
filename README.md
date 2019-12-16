@@ -30,7 +30,7 @@ const example = msQuery('#example');
 const example = msQuery('[href="github.com"]');
 ```
 
-### Example 4: Calling the First <div> on the Page
+### Example 4: Calling the First `<div></div>` on the Page
 
 ```
 const example = msQuery('div');
