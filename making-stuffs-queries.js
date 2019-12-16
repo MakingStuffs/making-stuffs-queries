@@ -6,3 +6,4 @@ export const msQuery = (selector = 'body', elem = document) => {
 export const msQueryAll = (selector = 'a', elem = document) => {
     return elem.querySelectorAll(selector);
 }
+
