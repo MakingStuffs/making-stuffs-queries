@@ -8,7 +8,7 @@ export const msQueryAll = (selector = 'a', elem = document) => {
 }
 
 export const msCreate = (elem = null, params = null) => {
-    const elemType = !elem ? 'div' : elem;
+    const elemType = !elem || typeof elem !== 'string' ? 'div' : elem;
     const newElem = document.createElement(elemType);
     if(typeof params === 'object' && !!params && !Array.isArray(params)) {
         const attributes = Object.keys(params);
