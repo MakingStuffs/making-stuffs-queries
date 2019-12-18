@@ -2,7 +2,7 @@
   "name": "making-stuffs-queries",
   "version": "1.1.1",
   "description": "A lightweight framework to shorten some JavaScript queries",
-  "main": "index.js",
+  "main": "./making-stuffs-queries.js",
   "scripts": {
     "test": "jest"
   },
