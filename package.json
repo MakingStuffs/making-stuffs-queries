@@ -1,6 +1,6 @@
 {
   "name": "making-stuffs-queries",
-  "version": "1.1.1",
+  "version": "1.1.11",
   "description": "A lightweight framework to shorten some JavaScript queries",
   "main": "./making-stuffs-queries.js",
   "scripts": {
