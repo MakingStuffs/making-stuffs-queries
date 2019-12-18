@@ -64,3 +64,31 @@ const elem = msCreate(null, { class: 'test' });
 ```
 const link = msCreate('a', { href: 'github.com', class: 'test' });
 ```
+
+## msAppend()
+
+Replaces the default document.append() and takes two arguments:
+
+1. Either an element (typeof `HTMLElement`) or an array of elements which are to be appended to the parent. Required.
+
+2. An element (typeof `HTMLElement`) to which the provided child nodes will be appended. If no argument is provided the function will default to `document.body`
+
+### Example 1: Append an array of elements to the document body
+```
+msAppend([element1, element2]);
+```
+
+### Example 2: Append an array of elements to a provided parent
+```
+msAppend([element1, element2], parentElement);
+```
+
+### Example 3: Append a single element to the document body
+``` 
+msAppend(element);
+```
+
+### Example 4: Append a single element to a passed parent element
+```
+msAppend(childElement, parentElement);
+```
