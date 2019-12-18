@@ -1,6 +1,6 @@
 {
   "name": "making-stuffs-queries",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lightweight framework to shorten some JavaScript queries",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "author": "MakingStuffs <dafingis@gmail.com> (https://makingstuffs.co.uk)",
   "license": "ISC",
+  "location": "/making-stuffs-queries",
   "dependencies": {
   },
   "devDependencies": {
