@@ -1,7 +1,11 @@
 # Making Stuffs Queries
-A simple lightweight library to make DOM querying and manipulation a little less laborious. The main purpose of this library is to save time from having to write out `document.someKindOfFunction` everytime you wish to interact with the DOM. 
+A simple lightweight library to make DOM querying and manipulation a little less laborious. The main purpose of this library is to save time from having to write out `document.someKindOfFunction` every time you wish to interact with the DOM.
 
-I will continue adding to this repo as, and when, I create new functions which I think are beneficial. 
+In order to add this functionality to a simple static webpage simply include the build file in the *dist* folder, or clone the repo and rebuild the files yourself.
+
+To add the library to your npm project simply run `npm i -D making-stuffs-queries`.
+
+I will continue adding to this repo as, and when, I create new functions which I think are beneficial. If you have any suggestions or find any bugs please feel free to report them or make a pull request.
 
 Anyway, here are some examples:
 
@@ -53,16 +57,20 @@ Replaces the default `document.createElement()` function and takes two optional 
 
 1. An element `tagName` (typeof `string`), used as you would use the standard syntax for the `document.createElement()` function. Defaults to `div`.
 
-2. An object containing attributes in a key/value pair system (typeof `object`). To be used as if each key/value pair is being fed into the `setAttribute()` function. Note that hyphenated attributes are not *yet* supported, this will be added in the next update. 
+2. An object containing attributes in a key/value pair system (typeof `object`). To be used as if each key/value pair is being fed into the `setAttribute()` function. 
+
+If you would like to add hyphenated attributes to the created element, such as data attributes, you need to add them with an underscore. For example, if you wished to add `data-index` attribute you would pass an object in the second argument with the following: `{ data_index: 'an index' }`.
+
+If you would like to set some content for the newly created element you can do so by simply adding an `innerHTML` key to the object passed for the second parameter. For example, to create a `<h1></h1>` element with a title of *Hey* you would add the following to your options object: `{ innerHTML: 'Hey' }`.
 
 ### Example 1: Create a `<div></div>` with a class of 'test'
 ```
 const elem = msCreate(null, { class: 'test' });
 ```
 
-### Example 2: Create an anchor link with a href of 'github.com' and class of 'test'
+### Example 2: Create an anchor link with a href of 'github.com', data-role of 'button', class of 'test', and content of 'Anchor link'
 ```
-const link = msCreate('a', { href: 'github.com', class: 'test' });
+const link = msCreate('a', { href: 'github.com', data_role: 'button', class: 'test', innerHTML: 'Anchor Link' });
 ```
 
 ## msAppend()
