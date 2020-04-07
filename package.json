@@ -2,13 +2,21 @@
   "name": "making-stuffs-queries",
   "version": "1.1.12",
   "description": "A lightweight framework to shorten some JavaScript queries",
-  "main": "./making-stuffs-queries.js",
+  "main": "making-stuffs-queries.js",
+  "keywords": ["javascript", "browser", "queries", "library", "DOM"],
   "scripts": {
     "test": "jest",
     "build": "rm -rf dist && webpack --mode production --config webpack.config.js",
     "zip": "rm -rf making-stuffs-queries.zip && zip -r making-stuffs-queries.zip dist -x exclude.lst"
   },
-  "author": "MakingStuffs <dafingis@gmail.com> (https://makingstuffs.co.uk)",
+  "author": "MakingStuffs <im.makingstuffs@gmail.com> (https://makingstuffs.co.uk)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MakingStuffs/making-stuffs-queries"
+  },
+  "bugs": {
+    "url": "https://github.com/MakingStuffs/making-stuffs-queries/issues"
+  },
   "license": "MIT",
   "location": "/making-stuffs-queries",
   "dependencies": {},
