@@ -1,4 +1,4 @@
-import { msCreate } from "../src";
+import { msCreate } from "../src/modules/creators.module";
 
 describe("Test the msCreate function", () => {
   test("Check if the default works -- Should return a plain div", () => {
@@ -32,32 +32,11 @@ describe("Test the msCreate function", () => {
     expect(elem.href).toBe("https://github.com/");
   });
 
-  test("Check that the object check works -- Should return a div with no attributes", () => {
-    const elem = msCreate(null, [1, 2, 3, 4]);
-    expect(elem instanceof HTMLElement).toBe(true);
-    expect(elem.tagName).toBe("DIV");
-    expect(elem.classList.length).toBe(0);
-  });
-
-  test("Check that the object check works -- Should return a div with no attributes", () => {
-    const elem = msCreate(null, () => "hey");
-    expect(elem instanceof HTMLElement).toBe(true);
-    expect(elem.tagName).toBe("DIV");
-    expect(elem.classList.length).toBe(0);
-  });
-
   test("Check that adding innerHTML works -- Should return a div with hello inside", () => {
     const elem = msCreate(null, { innerHTML: "hello" });
     expect(elem instanceof HTMLElement).toBe(true);
     expect(elem.tagName).toBe("DIV");
     expect(elem.classList.length).toBe(0);
     expect(elem.innerHTML).toBe("hello");
-  });
-
-  test("Check that the adding underscored attributes resulted in hyphenated -- Should return a div with a dataset.index value of 2", () => {
-    const elem = msCreate(null, { data_index: 2 });
-    expect(elem instanceof HTMLElement).toBe(true);
-    expect(elem.tagName).toBe("DIV");
-    expect(elem.dataset.index).toBe("2");
   });
 });

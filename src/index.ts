@@ -1,3 +1,3 @@
-export * from "./modules/creators.module";
-export * from "./modules/manipulators.module";
-export * from "./modules/queriers.module";
+export * from "src/modules/creators.module";
+export * from "src/modules/manipulators.module";
+export * from "src/modules/queriers.module";
