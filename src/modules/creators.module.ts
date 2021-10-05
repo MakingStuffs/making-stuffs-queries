@@ -30,10 +30,9 @@ export const msCreate = (
   // Ensure the params parameter is a true object and not an array or a falsey object
   if (typeof params === "object" && !!params && !Array.isArray(params)) {
     const attributes = Object.keys(params);
-
     for (let i = 0; i < attributes.length; i++) {
       // Check if the passed attribute matches the correct pattern
-      if (/^[a-z]+((-|_){1}[a-z]+)?$/.test(attributes[i])) continue;
+      if (!/^[a-z]+((-|_){1}[a-z]+)?$/i.test(attributes[i])) continue;
       // If innerHTML safely set with insert adjacentHTML
       if (attributes[i] === "innerHTML") {
         newElem.insertAdjacentHTML("afterbegin", params[attributes[i]]);
@@ -45,6 +44,5 @@ export const msCreate = (
       }
     }
   }
-
   return newElem;
 };
