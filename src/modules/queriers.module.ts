@@ -6,11 +6,11 @@
  * @returns HTML node or null if nothing is found.
  */
 export const msQuery = (
-  selector: string = "body",
+  selector = "body",
   elem: HTMLElement | Document = document
 ): HTMLElement | null => {
   const element: HTMLElement | null = elem.querySelector(selector);
-  return element ? element : null;
+  return element || null;
 };
 
 /**
@@ -21,7 +21,7 @@ export const msQuery = (
  * @returns HTML node list or null if nothing is found.
  */
 export const msQueryAll = (
-  selector: string = "a",
+  selector = "a",
   elem: HTMLElement | Document = document
 ): Element[] | [] => {
   const nodeList: NodeListOf<Element> = elem.querySelectorAll(selector);

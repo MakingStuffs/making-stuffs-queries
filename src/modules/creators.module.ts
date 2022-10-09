@@ -30,17 +30,18 @@ export const msCreate = (
   // Ensure the params parameter is a true object and not an array or a falsey object
   if (typeof params === "object" && !!params && !Array.isArray(params)) {
     const attributes = Object.keys(params);
-    for (let i = 0; i < attributes.length; i++) {
+    for (let i = 0; i < attributes.length; i += 1) {
       // Check if the passed attribute matches the correct pattern
-      if (!/^[a-z]+((-|_){1}[a-z]+)?$/i.test(attributes[i])) continue;
-      // If innerHTML safely set with insert adjacentHTML
-      if (attributes[i] === "innerHTML") {
-        newElem.insertAdjacentHTML("afterbegin", params[attributes[i]]);
-      } else {
-        // IF the attribute has an underscore hyphenate it
-        const attr = attributes[i].replace("_", "-");
-        // Set the attribute on the element
-        newElem.setAttribute(attr, params[attributes[i]]);
+      if (/^[a-z]+((-|_){1}[a-z]+)?$/i.test(attributes[i])) {
+        // If innerHTML safely set with insert adjacentHTML
+        if (attributes[i] === "innerHTML") {
+          newElem.insertAdjacentHTML("afterbegin", params[attributes[i]]);
+        } else {
+          // IF the attribute has an underscore hyphenate it
+          const attr = attributes[i].replace("_", "-");
+          // Set the attribute on the element
+          newElem.setAttribute(attr, params[attributes[i]]);
+        }
       }
     }
   }

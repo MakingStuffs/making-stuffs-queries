@@ -1,4 +1,4 @@
-import { msQueryAll } from "../src/modules/queriers.module";
+import { msQueryAll } from "modules/queriers.module";
 
 describe("Test the msQueryAll function", () => {
   test("Test querying non-existent elements in the document body - should return null", () => {
@@ -12,7 +12,7 @@ describe("Test the msQueryAll function", () => {
   });
 
   test("Test the default empty call -- Should return all anchor links", () => {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i += 1) {
       const link = document.createElement("a");
       document.body.append(link);
     }
@@ -23,7 +23,7 @@ describe("Test the msQueryAll function", () => {
 
   test("Test that function can get all specified children within a parent - Should return a list of anchors", () => {
     const parent = document.createElement("div");
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i += 1) {
       const link = document.createElement("a");
       parent.appendChild(link);
     }

@@ -1,4 +1,4 @@
-import { msCreate } from "../src/modules/creators.module";
+import { msCreate } from "modules/creators.module";
 
 describe("Test the msCreate function", () => {
   test("Check if the default works -- Should return a plain div", () => {

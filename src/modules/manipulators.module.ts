@@ -23,14 +23,11 @@ export const msAppend = (
   if (parent && parent instanceof HTMLElement === false) return;
 
   if (Array.isArray(children)) {
-    for (let child of children) {
+    children.forEach((child) => {
       if (child instanceof HTMLElement) {
         parent.append(child);
-      } else {
-        continue;
       }
-    }
-    if (parent.childElementCount === 0) return;
+    });
   } else {
     parent.appendChild(children);
   }

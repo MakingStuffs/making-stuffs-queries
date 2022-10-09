@@ -1,4 +1,4 @@
-import { msQuery } from "../src/modules/queriers.module";
+import { msQuery } from "modules/queriers.module";
 
 describe("Test the msQuery function", () => {
   test("Get an element which is non existent in the document - Should return null", () => {

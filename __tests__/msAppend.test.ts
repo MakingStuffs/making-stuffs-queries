@@ -1,5 +1,5 @@
-import { msCreate } from "../src/modules/creators.module";
-import { msAppend } from "../src/modules/manipulators.module";
+import { msCreate } from "modules/creators.module";
+import { msAppend } from "modules/manipulators.module";
 
 describe("Test the msAppend function", () => {
   test("Pass an array of children without a parent -- Should append them to the document body", () => {

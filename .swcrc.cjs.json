@@ -1,0 +1,18 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "target": "es5",
+      "tsx": false,
+      "decorators": false,
+      "dynamicImport": false,
+      "baseUrl": "src",
+      "paths": {
+        "modules/*": ["modules/*"]
+      }
+    }
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}
