@@ -5,6 +5,7 @@
       "target": "ES2022",
       "tsx": false,
       "decorators": false,
+
       "dynamicImport": false,
       "baseUrl": "src",
       "paths": {

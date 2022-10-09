@@ -24,6 +24,6 @@ export const msQueryAll = (
   selector = "a",
   elem: HTMLElement | Document = document
 ): Element[] | [] => {
-  const nodeList: NodeListOf<Element> = elem.querySelectorAll(selector);
+  const nodeList: Element[] = Array.from(elem.querySelectorAll(selector));
   return nodeList.length > 0 ? [...nodeList] : [];
 };

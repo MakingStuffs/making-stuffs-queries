@@ -1,3 +1,5 @@
+import { MSCreateParams } from "types/generic.types";
+
 /**
  * Function to create a new HTML Element according to the provided string.
  * If no elem parameter is provided it will default to a div container.
@@ -13,7 +15,7 @@
 export const msCreate = (
   elem: string | null = "div",
   params?: MSCreateParams
-): ExtendedHTMLElement => {
+): HTMLElement => {
   // Elem is not a string
   if (elem && typeof elem !== "string")
     throw new Error("Parameter 1 must be of type string");
@@ -23,9 +25,7 @@ export const msCreate = (
 
   const elemType = !elem ? "div" : elem;
 
-  const newElem: ExtendedHTMLElement = document.createElement(
-    elemType
-  ) as ExtendedHTMLElement;
+  const newElem: HTMLElement = document.createElement(elemType);
 
   // Ensure the params parameter is a true object and not an array or a falsey object
   if (typeof params === "object" && !!params && !Array.isArray(params)) {
