@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "lib/cjs/types",
+    "rootDir": "src",
+    "lib": ["DOM"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "emitDeclarationOnly": true
+  },
+  "include": ["src"]
+}
