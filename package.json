@@ -28,7 +28,7 @@
     "test": "jest",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "build": "yarn lint && yarn test && && yarn clean && yarn build:esm && yarn build:cjs",
+    "build": "yarn lint && yarn test && yarn clean && yarn build:esm && yarn build:cjs",
     "build:esm": "rm -rf li/esm && swc --config-file .swcrc.esm.json ./src -d lib/esm && tsc-alias",
     "build:cjs": "rm -rf li/cjs && swc --config-file .swcrc.cjs.json ./src -d lib/cjs && tsc-alias",
     "prepack": "yarn build",
