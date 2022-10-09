@@ -32,6 +32,7 @@
     "build:esm": "rm -rf li/esm && swc --config-file .swcrc.esm.json ./src -d lib/esm && tsc-alias",
     "build:cjs": "rm -rf li/cjs && swc --config-file .swcrc.cjs.json ./src -d lib/cjs && tsc-alias",
     "prepack": "yarn build",
+    "prepare": "yarn build",
     "semantic-release": "semantic-release"
   },
   "author": "MakingStuffs <im.makingstuffs@gmail.com> (https://makingstuffs.co.uk)",
