@@ -2,8 +2,9 @@
   "name": "@makingstuffs/queries",
   "version": "0.0.0-development",
   "description": "A lightweight framework to shorten some JavaScript queries",
-  "types": "./lib/cjs/types/index.d.ts",
+  "types": "./lib/esm/types/index.d.ts",
   "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "type": "module",
   "release": {
     "branches": [
@@ -28,13 +29,12 @@
     "test": "jest",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:esm:types && yarn build:cjs:types && tsc-alias",
-    "build:esm": "rm -rf li/esm && swc --config-file .swcrc.esm.json ./src -d lib/esm && tsc-alias",
-    "build:cjs": "rm -rf li/cjs && swc --config-file .swcrc.cjs.json ./src -d lib/cjs && tsc-alias",
-    "build:esm:types": "rm -rf lib/esm/types && tsc -p tsconfig.esm.json",
-    "build:cjs:types": "rm -rf lib/cjs/types && tsc -p tsconfig.cjs.json",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:esm:types && yarn build:cjs:types",
+    "build:esm": "rm -rf li/esm && swc --config-file .swcrc.esm.json ./src -d lib/esm",
+    "build:cjs": "rm -rf li/cjs && swc --config-file .swcrc.cjs.json ./src -d lib/cjs",
+    "build:esm:types": "rm -rf lib/esm/types && tsc -p tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
+    "build:cjs:types": "rm -rf lib/cjs/types && tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
     "prepack": "yarn --silent build",
-    "prepare": "yarn --silent build",
     "semantic-release": "semantic-release"
   },
   "author": "MakingStuffs <im.makingstuffs@gmail.com> (https://makingstuffs.co.uk)",
@@ -70,7 +70,7 @@
     "semantic-release": "^19.0.5",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.2.1",
-    "tsc-alias": "^1.7.0",
+    "tsc-alias": "^1.8.2",
     "typescript": "^4.4.3"
   },
   "engines": {
