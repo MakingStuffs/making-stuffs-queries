@@ -40,7 +40,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "ignorePatterns": ["lib", "node_modules"],
+  "ignorePatterns": ["lib", "node_modules", "replacer.cjs"],
   "rules": {
     "import/prefer-default-export": "off",
     "node/no-missing-import": "off",
