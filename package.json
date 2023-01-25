@@ -87,5 +87,9 @@
         "default": "./lib/cjs/index.js"
       }
     }
+  },
+  "resolutions": {
+    "semantic-release/semver-regex": "^3.1.4",
+    "@swc/**/got": "^11.8.5"
   }
 }
