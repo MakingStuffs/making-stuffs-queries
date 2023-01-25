@@ -1,4 +1,6 @@
-import { MSCreateParams } from "types/generic.types";
+export interface MSCreateParams {
+  [key: string]: string;
+}
 
 /**
  * Function to create a new HTML Element according to the provided string.
