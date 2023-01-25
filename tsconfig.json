@@ -20,8 +20,5 @@
     "outDir": "lib",
     "declarationDir": "lib/types"
   },
-  "exclude": ["node_modules", "dist"],
-  "tsc-alias": {
-    "resolveFullPaths": true
-  }
+  "exclude": ["node_modules", "lib"]
 }

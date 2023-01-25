@@ -9,5 +9,13 @@
     "moduleResolution": "Node",
     "emitDeclarationOnly": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "tsc-alias": {
+    "replacers": {
+      "typeDefs": {
+        "enabled": false,
+        "file": "./replacer.cjs"
+      }
+    }
+  }
 }

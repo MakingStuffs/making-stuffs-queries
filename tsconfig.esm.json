@@ -9,5 +9,15 @@
     "moduleResolution": "Node",
     "emitDeclarationOnly": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "tsc-alias": {
+    "verbose": true,
+    "resolveFullPaths": true,
+    "replacers": {
+      "typeDefs": {
+        "enabled": true,
+        "file": "./replacer.cjs"
+      }
+    }
+  }
 }
