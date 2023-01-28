@@ -17,6 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "skipLibCheck": true,
+    "downlevelIteration": true,
     "outDir": "lib",
     "declarationDir": "lib/types"
   },
