@@ -1,6 +1,6 @@
 {
   "name": "@makingstuffs/queries",
-  "version": "2.0.0",
+  "version": "0.0.0-development",
   "description": "A lightweight framework to shorten some JavaScript queries",
   "types": "./lib/esm/types/index.d.ts",
   "main": "./lib/cjs/index.js",
