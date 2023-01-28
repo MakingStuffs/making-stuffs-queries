@@ -91,6 +91,7 @@
   },
   "resolutions": {
     "semantic-release/semver-regex": "^3.1.4",
-    "@swc/**/got": "^11.8.5"
+    "@swc/**/got": "^11.8.5",
+    "@swc/**/semver-regex": "^3.1.4"
   }
 }

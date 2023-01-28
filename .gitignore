@@ -3,3 +3,4 @@ making-stuffs-queries.zip
 .gitignore
 lib
 .DS_Store
+.env
