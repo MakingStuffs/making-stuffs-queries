@@ -1,4 +1,4 @@
-import { msQueryAll } from "modules/queriers.module";
+import { msQueryAll } from "modules/msQueryAll";
 
 describe("Test the msQueryAll function", () => {
   test("Test querying non-existent elements in the document body - should return null", () => {

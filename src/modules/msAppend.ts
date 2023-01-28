@@ -8,9 +8,8 @@
  * If children is an array and it contains an index which is not of the type HTML Element it will
  * be skipped.
  * Function always returns undefined.
- * @param children
- * @param parent
- * @returns undefined;
+ * @param children Element(s) to append to the parent
+ * @param parent The element to append to (defaults to document.body)
  */
 
 export const msAppend = (
@@ -25,7 +24,7 @@ export const msAppend = (
   if (Array.isArray(children)) {
     children.forEach((child) => {
       if (child instanceof HTMLElement) {
-        parent.append(child);
+        parent.appendChild(child);
       }
     });
   } else {

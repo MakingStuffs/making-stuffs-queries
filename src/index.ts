@@ -1,4 +1,5 @@
 // Exporter
-export * from "modules/creators.module";
-export * from "modules/manipulators.module";
-export * from "modules/queriers.module";
+export * from "modules/msCreate";
+export * from "modules/msAppend";
+export * from "modules/msQuery";
+export * from "modules/msQueryAll";
