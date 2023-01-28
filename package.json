@@ -1,6 +1,6 @@
 {
   "name": "@makingstuffs/queries",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "A lightweight framework to shorten some JavaScript queries",
   "types": "./lib/esm/types/index.d.ts",
   "main": "./lib/cjs/index.js",
@@ -9,6 +9,21 @@
   "release": {
     "branches": [
       "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "README.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ]
   },
   "publishConfig": {
@@ -40,13 +55,12 @@
   "author": "MakingStuffs <im.makingstuffs@gmail.com> (https://makingstuffs.co.uk)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MakingStuffs/making-stuffs-queries"
+    "url": "https://github.com/MakingStuffs/making-stuffs-queries.git"
   },
   "bugs": {
     "url": "https://github.com/MakingStuffs/making-stuffs-queries/issues"
   },
   "license": "MIT",
-  "location": "/making-stuffs-queries",
   "dependencies": {},
   "devDependencies": {
     "@swc/cli": "^0.1.59",
