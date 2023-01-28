@@ -1,6 +1,8 @@
 # Making Stuffs Queries
 
-![example workflow](https://github.com/makingstuffs/making-stuffs-queries/actions/workflows/tests.yml/badge.svg)
+![Tests](https://github.com/makingstuffs/making-stuffs-queries/actions/workflows/tests.yml/badge.svg)
+![Build](https://github.com/makingstuffs/making-stuffs-queries/actions/workflows/build.yml/badge.svg)
+![Release](https://github.com/makingstuffs/making-stuffs-queries/actions/workflows/release.yml/badge.svg)
 
 A simple lightweight library to make DOM querying and manipulation a little less laborious. The main purpose of this library is to save time from having to write out `document.someKindOfFunction` every time you wish to interact with the DOM.
 
