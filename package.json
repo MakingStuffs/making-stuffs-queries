@@ -8,7 +8,7 @@
   "type": "module",
   "release": {
     "branches": [
-      "release"
+      "main"
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -18,9 +18,7 @@
         "@semantic-release/git",
         {
           "assets": [
-            "lib/**/*",
-            "package.json",
-            "README.md"
+            "package.json"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
