@@ -8,10 +8,7 @@
   "type": "module",
   "release": {
     "branches": [
-      {
-        "name": "main",
-        "channel": "release"
-      }
+      "release"
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
