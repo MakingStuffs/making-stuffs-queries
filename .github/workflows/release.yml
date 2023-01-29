@@ -18,6 +18,8 @@ jobs:
           node-version: "lts/*"
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Build Release
+        run: yarn build
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
