@@ -7,7 +7,12 @@
   "module": "./lib/esm/index.js",
   "type": "module",
   "release": {
-    "branch": "release",
+    "branches": [
+      {
+        "name": "main",
+        "channel": "release"
+      }
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
