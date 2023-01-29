@@ -8,7 +8,6 @@
   "type": "module",
   "release": {
     "branches": [
-      "main",
       "release"
     ],
     "plugins": [
@@ -19,6 +18,7 @@
         "@semantic-release/git",
         {
           "assets": [
+            "lib/**/*",
             "package.json",
             "README.md"
           ],
