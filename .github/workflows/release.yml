@@ -26,12 +26,4 @@ jobs:
       - name: Build Release
         run: yarn build
       - name: Release
-        uses: actions/checkout@v3
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
